@@ -12,7 +12,7 @@ export class Characters {
   surname: string;
 
   @Prop({ required: true })
-  age: number;
+  age: string;
 
   @Prop({ required: true })
   birth: string;

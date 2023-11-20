@@ -7,12 +7,18 @@ export class CharactersController {
 
   @Get(':name')
   async getCharactersByName(@Param('name') name: string) {
-    const foundCharacter =
-      await this.characterService.findCharacterByName(name);
+    try {
+      const foundCharacter =
+        await this.characterService.findCharacterByName(name);
 
-    if (!foundCharacter) {
-      throw new NotFoundException(`El personaje "${name}" no se a encontrado`);
+      if (!foundCharacter) {
+        throw new NotFoundException(
+          `El personaje "${name}" no se a encontrado`,
+        );
+      }
+      return foundCharacter;
+    } catch {
+      throw new Error('Esto no funciona');
     }
-    return foundCharacter;
   }
 }

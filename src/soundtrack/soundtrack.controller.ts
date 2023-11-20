@@ -7,12 +7,18 @@ export class SoundTrackController {
 
   @Get(':name')
   async getSoundTrackByName(@Param('name') name: string) {
-    const foundSoundTrack =
-      await this.soundTrackservice.findSoundTrackByName(name);
+    try {
+      const foundSoundTrack =
+        await this.soundTrackservice.findSoundTrackByName(name);
 
-    if (!foundSoundTrack) {
-      throw new NotFoundException(`"${name}" no se a encontrado`);
+      if (!foundSoundTrack) {
+        throw new NotFoundException(
+          `"El soundtrack: ${name}" no se a encontrado`,
+        );
+      }
+      return foundSoundTrack;
+    } catch {
+      throw new Error('Error musical');
     }
-    return foundSoundTrack;
   }
 }

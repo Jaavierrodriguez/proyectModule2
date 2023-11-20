@@ -7,11 +7,15 @@ export class EnemiesController {
 
   @Get(':name')
   async getEnemiesByName(@Param('name') name: string) {
-    const foundEnemie = await this.enemieservice.findEnemiByName(name);
+    try {
+      const foundEnemie = await this.enemieservice.findEnemiByName(name);
 
-    if (!foundEnemie) {
-      throw new NotFoundException(`El enemigo "${name}" no se a encontrado`);
+      if (!foundEnemie) {
+        throw new NotFoundException(`El enemigo "${name}" no se a encontrado`);
+      }
+      return foundEnemie;
+    } catch {
+      throw new Error('Enemigo parece que esta erradicado');
     }
-    return foundEnemie;
   }
 }

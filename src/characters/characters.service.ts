@@ -13,12 +13,3 @@ export class CharactersService {
     return await this.characterModel.findOne({ name }).exec();
   }
 }
-
-// return {
-//   name: 'name',
-//   surname: 'surname',
-//   age: 'age',
-//   birth: 'birth',
-//   description: 'description',
-//   location: 'location',
-// };

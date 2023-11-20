@@ -1,0 +1,193 @@
+@media (min-width: 150px) {
+  #images img {
+    padding: 0px;
+    width: 130px;
+    height: 170px;
+    border-radius: 10%;
+    align-items: center;
+    object-fit: cover;
+    flex-direction: row;
+  }
+
+  * {
+    padding: 10px 10px 10px 27px;
+    margin: 10px;
+  }
+
+  .charImg:hover {
+    transform: scale(1.1);
+  }
+
+  .eneImg:hover {
+    transform: scale(1.1);
+  }
+
+  #cabecera {
+    padding-top: 30px;
+    padding-left: 30vw;
+    color: whitesmoke;
+    font-family: 'Anton', sans-serif;
+    font-size: 70px;
+  }
+
+  body {
+    background-image: url('./media/wallpaper2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    /* Superposición de color y ajuste de intensidad */
+    background-color: #54473b;
+    background-blend-mode: overlay;
+
+    background-repeat: no-repeat;
+  }
+
+  #charBio {
+    color: #e0cab5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+    background-color: #54473b7f;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+  }
+
+  #eneBio {
+    color: #e0cab5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+    background-color: #54473b7f;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+  }
+
+  /* BOTON DESCRIPCIÓN */
+
+  @keyframes scale-up-center {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  #headTlou {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 8vw;
+  }
+
+  .btnDesplegable {
+    height: 50px;
+    width: 180px;
+    padding: 7px 95px;
+    font-size: 16px;
+    background-color: #e0cab5;
+    color: #393028;
+    font-family: 'Anton', sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #descripción {
+    display: none;
+    color: #e0cab5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+    background-color: #54473b7f;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+    animation: scale-up-center 0.4s;
+  }
+
+  .descripción-oculto {
+    display: none;
+  }
+
+  /* GAMERATING */
+
+  #valoración {
+    animation: scale-up-center 0.4s;
+    display: none;
+    color: #e0cab5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+    background-color: #54473b7f;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+  }
+
+  .gameRating-oculto {
+    display: none;
+  }
+
+  /* desarrolladores */
+  .btnDesplegable {
+    padding: 7px 25px;
+    background-color: #e0cab5;
+    color: 54473b;
+    font-family: 'Anton', sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #desarrolladores {
+    display: none;
+    color: #e0cab5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+    background-color: #54473b7f;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+    animation: scale-up-center 0.4s;
+  }
+
+  .desarrolladores-oculto {
+    display: none;
+  }
+
+  /* sequel */
+  .btnDesplegable {
+    padding: 7px 25px;
+    background-color: #e0cab5;
+    color: 54473b;
+    font-family: 'Anton', sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #secuela {
+    display: none;
+    color: #e0cab5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+    background-color: #54473b7f;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+    animation: scale-up-center 0.4s;
+  }
+
+  .secuela-oculto {
+    display: none;
+  }
+}

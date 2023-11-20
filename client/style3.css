@@ -1,0 +1,57 @@
+/* PARTE DEL REGISTER */
+* {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5% 0 0 0;
+}
+
+#register {
+  background-color: #54473b74;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 10px;
+  height: 90%;
+  width: 90%;
+  color: whitesmoke;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30px;
+}
+
+#content {
+  padding: 5% 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: whitesmoke;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 3px;
+}
+
+#register input {
+  width: 250px;
+}
+
+#register button {
+  width: 200px;
+  border-radius: 5px;
+  color: whitesmoke;
+  background-color: #54473b;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 3px;
+}
+
+#register button:hover {
+  width: 200px;
+  border-radius: 5px;
+  color: whitesmoke;
+  background-color: #626554;
+  font-family: 'Anton', sans-serif;
+}
