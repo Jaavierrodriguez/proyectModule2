@@ -12,4 +12,8 @@ export class ImagesService {
   async getPictures() {
     return await this.imagesModel.find();
   }
+
+  async getImagesByGame(game: string) {
+    return await this.imagesModel.find({ game: game });
+  }
 }

@@ -21,4 +21,21 @@ export class CharactersController {
       throw new Error('Esto no funciona');
     }
   }
+
+  @Get('/game/:name')
+  async getCharacterbyGame(@Param('name') name: string) {
+    try {
+      const foundCharacterbyName =
+        await this.characterService.findCharacterByGame(name);
+
+      if (!foundCharacterbyName) {
+        throw new NotFoundException(
+          `El personaje "${name}" no se a encontrado`,
+        );
+      }
+      return foundCharacterbyName;
+    } catch {
+      throw new Error('Que no lo he enchufao');
+    }
+  }
 }

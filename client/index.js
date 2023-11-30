@@ -1,19 +1,49 @@
 if (document.querySelector("#usernameLogin")) {
     document.querySelector("#btn").addEventListener("click", function () {
 
-        fetch('http://localhost:3007/thelastofus/auth/login', {
+        fetch('http://localhost:3007/auth/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username: document.querySelector("#usernameLogin").value, password: document.querySelector("#password").value })
         })
-            .then(res => res.json())
+            .then(res => {
+                if (res.status === 201) {
+
+                    return res.json();
+                } else {
+                    alert("No puedes pasar")
+                    throw new Error(res.statusText)
+                }
+            })
             .then(res => {
                 localStorage.setItem("token", res.access_token);
                 window.location.href = "/index.html"
             })
+            .catch(e => {
+                throw new Error("NO PUEDES PASAR!")
+            })
 
     })
 }
+
+if (document.querySelector("#registerUser")) {
+    document.querySelector("#btn-register").addEventListener("click", function () {
+
+        fetch('http://localhost:3007/auth/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username: document.querySelector("#registerUser").value, password: document.querySelector("#password-register").value })
+        })
+            .then(res => res.json())
+            .then(res => {
+                window.location.href = "/login.html";
+            })
+            .catch(error => {
+                console.error('Error en la petición de registro:', error);
+            });
+    });
+}
+
 
 const MiApi = 'http://localhost:3007/Images/allPictures'
 

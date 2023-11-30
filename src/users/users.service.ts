@@ -8,7 +8,7 @@ export class UsersService {
   constructor(@InjectModel('User') private userModel: Model<UserDocument>) {}
 
   async findOne(username: string) {
-    return await this.userModel.findOne({ username });
+    return await this.userModel.findOne({ username }).lean();
   }
 
   async register(body) {

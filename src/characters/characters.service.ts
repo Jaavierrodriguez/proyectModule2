@@ -12,4 +12,8 @@ export class CharactersService {
   async findCharacterByName(name: string) {
     return await this.characterModel.findOne({ name }).exec();
   }
+
+  async findCharacterByGame(name: string) {
+    return await this.characterModel.find({ game: name }).exec();
+  }
 }
